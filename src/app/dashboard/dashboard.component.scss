@@ -1,0 +1,277 @@
+@import '../../styles.scss';
+
+// .rounded-legend {
+//   ul {
+//     padding-left: 0;
+//     margin-bottom: 0;
+//     li {
+//       list-style-type: none;
+//       color: $text-muted;
+//       font-size: .75rem;
+//       .legend-dots {
+//         width: 1rem;
+//         height: 1rem;
+//         border-radius: 100%;
+//         display: inline-block;
+//         vertical-align: text-bottom;
+//         margin-right: .5rem;
+//         .rtl & {
+//           margin-left: .5rem;
+//         }
+//       }
+//     }
+//   }
+//   &.legend-horizontal {
+//     @include display-flex;
+//     ul {
+//       li {
+//         display: inline-block;
+//         margin-right: 1.5rem;
+//         .rtl & {
+//           margin-right: auto;
+//           margin-left: 1.5rem;
+//         }
+//       }
+//     }
+//   }
+//   &.legend-vertical {
+//     ul {
+//       li {
+//         margin-top: 1rem;
+//         &:first-child {
+//           margin-top: 0;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// #visit-sale-chart-legend {
+//   ul {
+//     li {
+//       &:nth-child(1) {
+//         .legend-dots {
+//           background: linear-gradient(to right, rgba(218, 140, 255, 1), rgba(154, 85, 255, 1));
+//         }
+//       }
+//       &:nth-child(2) {
+//         .legend-dots {
+//           background: linear-gradient(to right, rgba(255, 191, 150, 1), rgba(254, 112, 150, 1));
+//         }
+//       }
+//       &:nth-child(3) {
+//         .legend-dots {
+//           background:linear-gradient(to right, rgba(54, 215, 232, 1), rgba(177, 148, 250, 1))
+//         }
+//       }
+//     }
+//   }
+// }
+
+// #traffic-chart-legend {
+//   ul {
+//     li {
+//       &:nth-child(1) {
+//         .legend-dots {
+//           background:linear-gradient(to right, rgba(54, 215, 232, 1), rgba(177, 148, 250, 1))
+//         }
+//       }
+//       &:nth-child(2) {
+//         .legend-dots {
+//           background:linear-gradient(to right, rgba(6, 185, 157, 1), rgba(132, 217, 210, 1));
+//         }
+//       }
+//       &:nth-child(3) {
+//         .legend-dots {
+//           background:linear-gradient(to right, rgba(255, 191, 150, 1), rgba(254, 112, 150, 1));
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  max-height: calc(100vh - #{$navbar-height});
+  background: $sidebar-bg;
+  font-family: $type1-regular;
+  padding: 0;
+  z-index: 11;
+  height: 100%;
+}
+
+
+.side-panel{
+  background-color: rgb(240, 236, 236);
+  padding: 1rem;
+}
+.right{
+  display: flex;
+  overflow: auto;
+  background-color: #ccc;
+}
+
+.card-panel{
+  min-width: 325px;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+
+.social-card {
+  margin: 72px auto 0 auto;
+  width: 280px;
+  border-radius: 6px;
+  border: 1px solid #E1E4E9;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-bg {
+  width: 100%;
+  height: 170px;
+  position: relative;
+  background: #B3C5D3;
+  // background-image: url("http://www.fillmurray.com/352/170");
+}
+
+.flag {
+  width: 92px;
+  height: 32px;
+  border-radius: 4px 0 0 4px;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  text-align: center;
+  background: white;
+  line-height: 32px;
+  color: #333;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.card-avatar {
+  display: flex;
+  position: absolute;
+  left: 24px;
+  top: 140px;
+}
+.card-avatar img {
+  border-radius: 4px;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.14);
+  border: 2px solid #fff;
+}
+.card-avatar .content-meta {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card-avatar .content-meta h1 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+.card-avatar .content-meta p {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.card-content {
+  width: 100%;
+  padding: 56px 24px 24px 24px;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.6px;
+  text-wrap: wrap;
+  text-align: left;
+}
+.card-content a {
+  color: #333;
+  font-weight: 400;
+}
+
+.card-footer {
+  width: 100%;
+  border-top: 1px solid #E1E4E9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-footer a {
+  text-align: center;
+  flex: 1;
+  line-height: 40px;
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+  font-weight: 500;
+}
+.card-footer a:hover {
+  background: #e6e6e6;
+}
+.card-footer .divider {
+  width: 1px;
+  height: 40px;
+  background: #E1E4E9;
+}
+
+
+
+
+// Dates
+
+.form-group.hidden {
+  width: 0;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+.custom-day {
+  text-align: center;
+  padding: 0.185rem 0.25rem;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+}
+.custom-day.focused {
+  background-color: #e6e6e6;
+}
+.custom-day.range, .custom-day:hover {
+  background-color: rgb(2, 117, 216);
+  color: white;
+}
+.custom-day.faded {
+  background-color: rgba(2, 117, 216, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
