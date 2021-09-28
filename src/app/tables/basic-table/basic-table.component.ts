@@ -27,7 +27,20 @@ export class BasicTableComponent implements OnInit {
     this.toDate = calendar.getNext(calendar.getToday(), "d", 10);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.rest
+        .getsummary(
+          JSON.stringify({
+            from: `${this.fromDate["year"]}-${"09"}-${this.fromDate["day"]}`,
+            to: `${this.toDate["year"]}-${"09"}-${this.toDate["day"]}`,
+          })
+        )
+        .subscribe((data) => {
+
+          data = JSON.parse(data);
+          this.responseData = data;
+        });
+  }
 
   onDateSelection(date: NgbDate) {
     if (!this.fromDate && !this.toDate) {

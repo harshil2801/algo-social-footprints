@@ -20,4 +20,7 @@ export class ApiService {
   getweeklysentiments(sentimentta:any): Observable<any>{
     return this.http.get<any>('http://127.0.0.1:8000/get_weekly_sentiment_score/TCS');
   }
+  getsummary(summary:any): Observable<any>{
+    return this.http.get<any>('http://127.0.0.1:8000/get_summary/TCS');
+  }
 }

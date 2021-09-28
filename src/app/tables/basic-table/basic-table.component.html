@@ -149,6 +149,8 @@
     <div class="card">
       <div class="card-body">
         <h4 class="card-title">Summary</h4>
+        <div *ngFor="let item of responseData"></div>
+        <p>{{  item.summary}}</p>
       </div>
     </div>
   </div>
