@@ -7,11 +7,27 @@
         id="exampleFormControlSelect2"
       >
         <option>Twitter</option>
+        <option>LinkedIn</option>
+        <option>Facebook</option>
       </select>
+      <div class="buttons">
+        <button (click)="addCard()">My Tweets</button>
+        <button (click)="addCard()">Competitor Tweets</button>
+        <button (click)="addCard()">Mentions</button>
+        <button (click)="clearCards()">Clear</button>
+      </div>
     </div>
   </div>
+  <div class="blocksWrapper">
+    <app-block-card *ngFor="let block of blocks" [blockData]="block">
+
+    
   <div class="right">
+    
     <div class="card-panel">
+      
+      
+        
       <form class="form-inline">
         <div class="form-group hidden">
           <div class="input-group">
@@ -85,7 +101,9 @@
         <div class="social-card">
           <div class="card-bg">
             <span class="flag">{{ item.user_screen_name }}</span>
+           
           </div>
+          
           <div class="card-avatar">
             <a href="#"
               ><img src="{{ item.profile_image_url }}" alt="Avatar"
@@ -97,7 +115,15 @@
           </div>
           <div class="card-content">
             <p>
-              {{ item.full_text }}
+              <!-- {{ item.created_at }}
+              {{ item.id }} -->
+              {{ item.text }}
+              <!-- {{ item.screen_name }}
+              {{ item.name }}
+              {{ item.urls }}
+              {{ item.followers_count }}
+              {{ item.location }}
+              {{ item.profile_image_url }} -->
               <!-- This is paragraph text that will go inside of the social media card
               object right here. Also this text will be limited to x amount of.<a
                 href="#"
@@ -108,5 +134,17 @@
         </div>
       </div>
     </div>
+    <!-- <div class="card-panel">
+      <form class="form-inline">
+        <div class="form-group hidden">
+            
+        </div>
+      </form>
+    </div> -->
+  </div>
+  </app-block-card>
   </div>
 </div>
+
+
+

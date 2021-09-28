@@ -15,6 +15,9 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   gettweets(data:any): Observable<any> {
-    return this.http.post<any[]>('http://127.0.0.1:5000/tweets', data, this.httpOptions);
+    return this.http.get<any>('http://127.0.0.1:8000/get_tweets');
+  }
+  getweeklysentiments(sentimentta:any): Observable<any>{
+    return this.http.get<any>('http://127.0.0.1:8000/get_weekly_sentiment_score/TCS');
   }
 }

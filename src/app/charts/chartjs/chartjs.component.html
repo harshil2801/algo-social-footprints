@@ -1,4 +1,4 @@
-<div class="page-header">
+<!-- <div class="page-header">
   <h3 class="page-title">
     Insights
   </h3>
@@ -62,4 +62,8 @@
       </div>
     </div>
   </div>
-</div> -->
+</div> --> -->
+
+<div id="chart-container">
+	<canvas #myCanvas id="canvas" baseChart [chartType]="chartType" [datasets]="chartData" [labels]="chartLabels" [colors]="chartColors" [options]="chartOptions"></canvas>
+</div>

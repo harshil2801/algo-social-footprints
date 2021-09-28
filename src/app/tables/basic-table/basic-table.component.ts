@@ -47,7 +47,11 @@ export class BasicTableComponent implements OnInit {
           })
         )
         .subscribe((data) => {
-          this.responseData = data['data']
+
+          data = JSON.parse(data);
+          this.responseData = data['key1'];
+          //this.responseData = data['data']
+          console.log(typeof(data));
         });
     } else {
       this.toDate = null;
