@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EditStreamsComponent } from './edit-streams/edit-streams.component';
+import { HistoricalTrendsComponent } from './historical-trends/historical-trends.component';
+import { NewStreamsComponent } from './new-streams/new-streams.component';
+import { SettingsComponent } from './settings/settings.component';
+import { SummaryComponent } from './summary/summary.component';
 
 
 const routes: Routes = [
@@ -16,6 +21,12 @@ const routes: Routes = [
   { path: 'apps', loadChildren: () => import('./apps/apps.module').then(m => m.AppsModule) },
   { path: 'user-pages', loadChildren: () => import('./user-pages/user-pages.module').then(m => m.UserPagesModule) },
   { path: 'error-pages', loadChildren: () => import('./error-pages/error-pages.module').then(m => m.ErrorPagesModule) },
+  // { path: 'summary', loadChildren: () => import('./summary/summary.component').then(m => m.SummaryComponent) }
+  { path: 'summary', component: SummaryComponent },
+  { path: 'newstreams', component: NewStreamsComponent },
+  { path: 'editstreams', component: EditStreamsComponent},
+  { path: 'trends', component: HistoricalTrendsComponent},
+  { path: 'settings', component: SettingsComponent}
 ];
 
 @NgModule({

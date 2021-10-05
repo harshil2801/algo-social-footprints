@@ -187,7 +187,8 @@
             -moz-box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.2);
             &.navbar-dropdown {
-              position: absolute;            
+              position: absolute;
+              width: 150%;            
               font-size: 0.9rem;
               margin-top: 0;
               right: 0;
@@ -388,3 +389,4 @@
     }
   }
 }
+

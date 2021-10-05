@@ -1,0 +1,35 @@
+
+<h4 id="inputbox">Stream Name    : </h4>
+<input [(ngModel)] = "streamname" id="input1">
+
+<h4 id="inputbox">Twitter Handle : </h4>
+<input [(ngModel)] = "handle" id="input1">
+
+
+<h4 id="inputbox">HashTags      : </h4>
+<input [(ngModel)] = "hashtags" id="input1">
+
+<h4 id="inputbox">Keywords      : </h4>
+<input [(ngModel)] = "keywords" id="input1">
+
+<h4 id="inputbox">Frequency :</h4>
+<div class="form-group">
+    <select
+        class="form-control form-control-lg"
+        id="exampleFormControlSelect2"
+      >
+        <option>Hourly</option>
+        <option>Minute</option>
+        <option>Second</option>
+      </select>
+</div>
+
+<p>{{ streamname }}</p>
+<p>{{ handle }}</p>
+<p>{{ hashtags }}</p>
+<p>{{ keywords }}</p>
+
+<button id="button" (click)="submit()">Submit</button>
+<button id="button1" routerLink="/dashboard" routerLinkActive="active" #dashboard="routerLinkActive" >Back</button>
+
+<!-- <a class="nav-link" routerLink="/dashboard" routerLinkActive="active" #dashboard="routerLinkActive"></a> -->

@@ -17,8 +17,14 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { ContentAnimateDirective } from './shared/directives/content-animate.directive';
 import { TodoListComponent } from './apps/todo-list/todo-list.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { SummaryComponent } from './summary/summary.component';
+// import { TagCloudModule } from 'angular-tag-cloud-module';
 
-
+import { HighchartsChartModule } from 'highcharts-angular';
+import { NewStreamsComponent } from './new-streams/new-streams.component';
+import { EditStreamsComponent } from './edit-streams/edit-streams.component';
+import { HistoricalTrendsComponent } from './historical-trends/historical-trends.component';
+import { SettingsComponent } from './settings/settings.component';
 //import {MatNativeDateModule} from '@angular/material';
 //import {MatDatepickerModule} from '@angular/material/datepicker';
 
@@ -33,7 +39,13 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     TodoListComponent,
     TodoComponent,
     SpinnerComponent,
-    ContentAnimateDirective
+    ContentAnimateDirective,
+    SummaryComponent,
+    NewStreamsComponent,
+    EditStreamsComponent,
+    HistoricalTrendsComponent,
+    SettingsComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -44,6 +56,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     ReactiveFormsModule,
     ChartsModule,
     HttpClientModule,
+    HighchartsChartModule
+    // TagCloudModule
     //MatDatepickerModule
   ],
   providers: [ThemeService,HttpClientModule],

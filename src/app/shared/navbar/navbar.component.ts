@@ -1,21 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NewStreamsComponent } from 'src/app/new-streams/new-streams.component';
+// C:\Users\Harshil\SocialFootprintTempalte\src\app\new-streams\new-streams.component.ts
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
-  providers: [NgbDropdownConfig]
+  providers: [NgbDropdownConfig, NewStreamsComponent]
 })
 export class NavbarComponent implements OnInit {
   public iconOnlyToggled = false;
   public sidebarToggled = false;
+  private streamname: string;
+  
   
   constructor(config: NgbDropdownConfig) {
     config.placement = 'bottom-right';
+    // this.streamname = NewStreamsComponent.submit();
+    
   }
 
   ngOnInit() {
+    // this.streamname = NewStreamsComponent.
   }
 
   // toggle sidebar in small devices
