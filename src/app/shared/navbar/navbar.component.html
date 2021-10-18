@@ -29,8 +29,11 @@
             <p class="mb-1 text-black">Streams</p>
           </div>
         </a>
+        <table id="table">
         <div class="dropdown-menu navbar-dropdown" ngbDropdownMenu aria-labelledby="profileDropdown">
+          <tr>
           <a class="dropdown-item" href="javascript:;">
+            
             <input type = "checkbox">
             
             <!-- <i class="mdi mdi-cached mr-2 text-success"></i> -->
@@ -38,18 +41,42 @@
             <a class="nav-link" routerLink="/editstreams" routerLinkActive="active" #editstreams="routerLinkActive">
             <i class="mdi mdi-tooltip-edit">Edit</i>
             </a>
+            <!-- <input type="image" class="mdi mdi-delete" name="submit" width="100" height="48" alt="submit"/> -->
+            <button onclick="document.getElementById('id01').style.display='block'">
             <i class="mdi mdi-delete">Delete</i>
+          </button>
           </a>
+          </tr>
           <div class="dropdown-divider"></div>
+          <tr>
           <a class="dropdown-item" href="javascript:;">
+            
             <input type = "checkbox">
             <!-- <i class="mdi mdi-logout mr-2 text-primary"></i> -->
             Stream 2
             <a class="nav-link" routerLink="/editstreams" routerLinkActive="active" #editstreams="routerLinkActive">
               <i class="mdi mdi-tooltip-edit">Edit</i>
               </a>
-              <i class="mdi mdi-delete">Delete</i>
+              <!-- <button onclick="document.getElementById('id01').style.display='block'">Delete</button> -->
+              <button onclick="document.getElementById('id01').style.display='block'">
+                <i class="mdi mdi-delete">Delete</i>
+              </button>
+
+              <!-- <script>
+               l
+                var modal = document.getElementById('id01');
+                
+                
+                window.onclick = function(event) {
+                  if (event.target == modal) {
+                    modal.style.display = "none";
+                  }
+                }
+                </script> -->
+              <!-- <i class="mdi mdi-delete">Delete</i> -->
+              
             </a>
+            </tr>
           <!-- </a> -->
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="javascript:;">
@@ -59,7 +86,35 @@
           <!-- </i> -->
           </a>
         </div>
+        </table>
       </li>
+
+      <!-- <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content" action="/action_page.php">
+          <div class="container">
+            <h1>Delete Stream</h1>
+            <p>Are you sure you want to delete stream?</p>
+          
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Delete</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <script>
+        
+        var modal = document.getElementById('id01');
+        
+        
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script> -->
       <!-- <li class="nav-item dropdown" ngbDropdown>
         <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" ngbDropdownToggle>
           <i class="mdi mdi-email-outline"></i>
@@ -183,3 +238,31 @@
     </button>
   </div>
 </nav>
+
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Delete Stream</h1>
+      <p>Are you sure you want to delete stream?</p>
+    
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Delete</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+  
+  var modal = document.getElementById('id01');
+  
+  
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>

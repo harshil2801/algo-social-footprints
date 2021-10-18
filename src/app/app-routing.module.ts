@@ -6,6 +6,7 @@ import { HistoricalTrendsComponent } from './historical-trends/historical-trends
 import { NewStreamsComponent } from './new-streams/new-streams.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SummaryComponent } from './summary/summary.component';
+import { MarketResearchComponent } from './market-research/market-research.component';
 
 
 const routes: Routes = [
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'newstreams', component: NewStreamsComponent },
   { path: 'editstreams', component: EditStreamsComponent},
   { path: 'trends', component: HistoricalTrendsComponent},
-  { path: 'settings', component: SettingsComponent}
+  { path: 'settings', component: SettingsComponent},
+  { path: 'marketresearch', component: MarketResearchComponent}
 ];
 
 @NgModule({

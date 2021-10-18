@@ -238,29 +238,29 @@
 
 // Dates
 
-.form-group.hidden {
-  width: 0;
-  margin: 0;
-  border: none;
-  padding: 0;
-}
-.custom-day {
-  text-align: center;
-  padding: 0.185rem 0.25rem;
-  display: inline-block;
-  height: 2rem;
-  width: 2rem;
-}
-.custom-day.focused {
-  background-color: #e6e6e6;
-}
-.custom-day.range, .custom-day:hover {
-  background-color: rgb(2, 117, 216);
-  color: white;
-}
-.custom-day.faded {
-  background-color: rgba(2, 117, 216, 0.5);
-}
+// .form-group.hidden {
+//   width: 0;
+//   margin: 0;
+//   border: none;
+//   padding: 0;
+// }
+// .custom-day {
+//   text-align: center;
+//   padding: 0.185rem 0.25rem;
+//   display: inline-block;
+//   height: 2rem;
+//   width: 2rem;
+// }
+// .custom-day.focused {
+//   background-color: #e6e6e6;
+// }
+// .custom-day.range, .custom-day:hover {
+//   background-color: rgb(2, 117, 216);
+//   color: white;
+// }
+// .custom-day.faded {
+//   background-color: rgba(2, 117, 216, 0.5);
+// }
 
 .blocksWrapper {
   display: flex;
@@ -286,10 +286,10 @@
   // background-size: cover;
 }
 
-.buttons{
-  padding:10px;
-  margin-top: 150px;
-}
+// .buttons{
+//   padding:10px;
+//   margin-top: 150px;
+// }
 
 
 
@@ -300,15 +300,25 @@
 }
 
 #chartdiv1{
-  padding-top: 50px;
+  padding-top: 25px;
   padding-left: 150px;
   width: 600px;
+  border: black;
   //padding-right: 50px;
   //width: 100px;
 }
 
-#container{
+#chartdiv{
   padding-top: 50px;
+  padding-left: 50px;
+  height: 350px;
+  width: 1200px;
+  margin-bottom: 10px;
+  border: black;
+}
+
+#container{
+  padding-top: 25px;
   padding-left: 50px;
   height: 350px;
   width: 640px;
@@ -316,17 +326,39 @@
 
 
 
+:host {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  // margin-right: 750px;
+  // margin-left: 150px;
+  //   margin-right: 250px;
+  height: 100%;
+  width: 100%;
+}
+
+
+.customDates{
+  margin-bottom: 50px;
+  margin-right: 750px;
+  margin-left: 750px;
+}
 
 
 
 
+// hr.solid {
+//   border-top: 3px solid #bbb;
+// }
 
 
+#card123{
+  border: black 10px;
+  border-style: solid;
+}
 
-
-
-
-
-
-
-
+#abc{
+  margin-top: 15px;
+  margin-left: 900px;
+}

@@ -148,10 +148,44 @@
 
 
  -->
+ <div class="customDates">
+ <mat-form-field id="abc" appearance="fill">
+  <mat-label>Enter a date range</mat-label>
+  <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+    <input matStartDate formControlName="start" placeholder="Start date" />
+    <input matEndDate formControlName="end" placeholder="End date" />
+  </mat-date-range-input>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker
+    #picker
+    [calendarHeaderComponent]="ExampleHeaderComponent"
+    
+  ></mat-date-range-picker>
+</mat-form-field>
+</div>
+
+<!-- {{date  | myDate:'yyyy-MM-dd'}} -->
+
+<!-- <input type="date"> -->
+
  <div class="row">
   <div id="container"></div>
   <div id="chartdiv1"></div>
  </div>
+
+ <hr class="solid">
 <!-- <div class="column"> -->
- <div id="concatChart"></div>
+ <!-- <div id="concatChart"></div> -->
+ <div class="card123">
+ <div id="chartdiv"></div>
+</div>
 <!-- </div> -->
+<!-- <p>
+{{ stringResult }}
+</p> -->
+<!-- 
+<div *ngFor="let item of stringResult">
+  <p>
+    {{ item.complete_text}}
+  </p>
+</div> -->

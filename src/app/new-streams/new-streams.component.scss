@@ -1,11 +1,18 @@
 #inputbox{
     padding-left: 375px;
     padding-top: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
+    font-weight: bold;
     text-align: justify;
               text-justify: inter-word;
               
     
+}
+
+#label{
+    text-align: justify;
+    text-justify: inter-word;
+    padding-left: 375px;
 }
 
 #hint{
@@ -15,22 +22,41 @@
 #input1{
     margin-left: 375px;
     width: 350px;
+    height: 29px;
+    // border-radius: 25%;
     text-align: justify;
               text-justify: inter-word;
 }
 
 #button{
-    width: 150px;
+    // width: 150px;
     margin-left: 375px;
     margin-top: 25px;
+    margin-bottom: 10px;
     // width: 350px;
     // height: 350px;
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 #button1{
-    width: 150px;
-    margin-left: 75px;
+    width: 125px;
+    margin-left: 110px;
     margin-top: 25px;
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
     // width: 350px;
     // height: 350px;
 }

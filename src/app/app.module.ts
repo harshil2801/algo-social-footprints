@@ -25,13 +25,32 @@ import { NewStreamsComponent } from './new-streams/new-streams.component';
 import { EditStreamsComponent } from './edit-streams/edit-streams.component';
 import { HistoricalTrendsComponent } from './historical-trends/historical-trends.component';
 import { SettingsComponent } from './settings/settings.component';
-//import {MatNativeDateModule} from '@angular/material';
-//import {MatDatepickerModule} from '@angular/material/datepicker';
+// import {MatNativeDateModule} from '@angular/material';
+// import {MatDatepickerModule} from '@angular/material/datepicker';
+// import { ReactiveFormsModule } from '@angular/forms';
 
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { CustomRangePanelComponent } from 'src/app/dashboard/example-header/custom-range-panel.component';
+import { ExampleHeaderComponent } from 'src/app/dashboard/example-header/example-header.component';
+import { MarketResearchComponent } from './market-research/market-research.component';
+// src/app/dashboard/example-header/example-header.component
+// import { DatePipe } from '@angular/common';
+// import { FormsModule } from "@angular/forms";
+// import { CategoryChartLineChartMultipleSourcesComponent } from "./line-chart-multiple-sources/category-chart-line-chart-multiple-sources.component";
+import { 
+	IgxCategoryChartModule,
+	IgxLegendModule
+ } from "igniteui-angular-charts";
 @NgModule({
   declarations: [
     AppComponent,
+    CustomRangePanelComponent,
+    ExampleHeaderComponent,
     NavbarComponent,
     SidebarComponent,
     FooterComponent,
@@ -45,7 +64,8 @@ import { SettingsComponent } from './settings/settings.component';
     EditStreamsComponent,
     HistoricalTrendsComponent,
     SettingsComponent,
-    
+    MarketResearchComponent,
+    // ReactiveFormsModule
   ],
   imports: [
     BrowserModule,
@@ -56,9 +76,18 @@ import { SettingsComponent } from './settings/settings.component';
     ReactiveFormsModule,
     ChartsModule,
     HttpClientModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    // DatePipe
+    MatFormFieldModule,
+    // MatDatepickerModule,
+    MatNativeDateModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
     // TagCloudModule
-    //MatDatepickerModule
+    MatDatepickerModule,
+    IgxCategoryChartModule,
+	  IgxLegendModule
   ],
   providers: [ThemeService,HttpClientModule],
   bootstrap: [AppComponent]

@@ -1,0 +1,36 @@
+<app-custom-range-panel></app-custom-range-panel>
+
+<div class="example-header">
+  <!-- "previous" buttons -->
+  <button
+    mat-icon-button
+    class="example-double-arrow"
+    (click)="previousClicked('year')"
+  >
+    <!-- <mat-icon>keyboard_arrow_left</mat-icon>
+    <mat-icon>keyboard_arrow_left</mat-icon> -->
+    <i class="mdi mdi-chevron-double-left"></i>
+  </button>
+  <button mat-icon-button (click)="previousClicked('month')">
+    <!-- <mat-icon>keyboard_arrow_left</mat-icon> -->
+    <i class="mdi mdi-chevron-left"></i>
+  </button>
+
+  <!-- center label -->
+  <span class="example-header-label">{{ periodLabel }}</span>
+
+  <!-- "next" buttons -->
+  <button mat-icon-button (click)="nextClicked('month')">
+    <!-- <mat-icon>keyboard_arrow_right</mat-icon> -->
+    <i class="mdi mdi-chevron-right"></i>
+  </button>
+  <button
+    mat-icon-button
+    class="example-double-arrow"
+    (click)="nextClicked('year')"
+  >
+    <!-- <mat-icon>keyboard_arrow_right</mat-icon>
+    <mat-icon>keyboard_arrow_right</mat-icon> -->
+    <i class="mdi mdi-chevron-double-right"></i>
+  </button>
+</div>

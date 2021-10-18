@@ -2,13 +2,24 @@
 <h4 id="inputbox">Stream Name    : </h4>
 <input [(ngModel)] = "streamname" id="input1">
 
+
+
+
 <h4 id="inputbox">Twitter Handle : </h4>
-<!-- <h6 id="hint">Include @</h6> -->
-<input [(ngModel)] = "handle" id="input1">
+<label id="label" for="input1">Twitter username with the leading @ symbol:</label><br/>
+<!-- <div class="is-helpful" data-helper="Validates if not empty." data-error="Please enter your first name."></div> -->
+<span class="icon validation small success hide">
+  <span class="fa fa-check"></span>
+</span>
+<span class="icon validation small error hide">
+  <span class="fa fa-remove"></span>
+</span>
+<input [(ngModel)] = "handle" id="input1" type="text" pattern="^@[A-Za-z0-9_]{1,15}$" required>
 
 
 <h4 id="inputbox">HashTags      : </h4>
-<input [(ngModel)] = "hashtags" id="input1">
+<label id="label" for="input1">HashTags with the leading # symbol:</label><br/>
+<input [(ngModel)] = "hashtags" id="input1" type="text" pattern="^#[A-Za-z0-9_]{1,15}$" required>
 
 <h4 id="inputbox">Keywords      : </h4>
 <input [(ngModel)] = "keywords" id="input1">
@@ -25,12 +36,62 @@
       </select>
 </div>
 
-<p>{{ streamname }}</p>
+
+<!-- <p>{{ streamname }}</p>
 <p>{{ handle }}</p>
 <p>{{ hashtags }}</p>
-<p>{{ keywords }}</p>
+<p>{{ keywords }}</p> -->
 
 <button id="button" (click)="submit()">Submit</button>
 <button id="button1" routerLink="/dashboard" routerLinkActive="active" #dashboard="routerLinkActive" >Back</button>
 
 <!-- <a class="nav-link" routerLink="/dashboard" routerLinkActive="active" #dashboard="routerLinkActive"></a> -->
+
+<!-- <form>
+  <h2>Twitter Username Validation</h2>
+  <label for="twitter">Twitter username with the leading @ symbol:</label><br/>
+  <input id="twitter" type="text" pattern="^@[A-Za-z0-9_]{1,15}$" required>
+  <input type="submit" value="Submit">
+  
+  <p class="p">Demo by Agbonghama Collins. <a href="http://www.sitepoint.com/client-side-form-validation-html5/">See article</a>.</p>
+</form> -->
+<!-- <form [formGroup]="form" (ngSubmit)="onSubmit()">
+<div class="form-group">
+  <label>Email</label>
+  <input
+    type="text"
+    formControlName="email"
+    class="form-control"
+    [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+  />
+  <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+    <div *ngIf="f.email.errors.required">Email is required</div>
+    <div *ngIf="f.email.errors.email">Email is invalid</div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label>Twitter Handle</label>
+  <input
+    type="text"
+    formControlName="handle"
+    class="form-control"
+    [ngClass]="{ 'is-invalid': submitted && f.handle.errors }"
+  />
+  <div *ngIf="submitted && f.handle.errors" class="invalid-feedback">
+    <div *ngIf="f.handle.errors.required">@ is required</div>
+    <div *ngIf="f.handle.errors.email">Handle name is invalid</div>
+  </div>
+</div>
+
+<div class="form-group">
+  <button type="submit" class="btn btn-primary">Register</button>
+  <button
+    type="button"
+    (click)="onReset()"
+    class="btn btn-warning float-right"
+  >
+    Reset
+  </button>
+</div>
+</form> -->
