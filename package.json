@@ -28,6 +28,7 @@
     "@mdi/font": "^5.7.55",
     "@ng-bootstrap/ng-bootstrap": "^6.1.0",
     "@types/highcharts": "^7.0.0",
+    "amazing-time-picker": "^1.8.0",
     "angular-tag-cloud-module": "^6.0.1",
     "angular4-word-cloud": "^1.0.4",
     "bootstrap": "^4.5.3",
@@ -39,6 +40,7 @@
     "igniteui-angular-core": "^12.1.1",
     "jquery": "^3.5.1",
     "ng2-charts": "^2.4.2",
+    "ngx-mat-datetime-picker": "^3.0.0",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.3",
     "zone.js": "~0.11.1"

@@ -1,0 +1,415 @@
+#inputbox{
+    padding-left: 375px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    text-align: justify;
+              text-justify: inter-word;
+              
+    
+}
+
+#label{
+    text-align: justify;
+    text-justify: inter-word;
+    padding-left: 375px;
+}
+
+#hint{
+    padding-left: 375px;
+}
+
+#input1{
+    margin-left: 375px;
+    width: 350px;
+    height: 29px;
+    // border-radius: 25%;
+    text-align: justify;
+              text-justify: inter-word;
+}
+
+#button{
+    // width: 150px;
+    margin-left: 0px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    // width: 350px;
+    // height: 350px;
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#button1{
+    width: 125px;
+    margin-left: 150px;
+    margin-top: 25px;
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+    // width: 350px;
+    // height: 350px;
+}
+
+#exampleFormControlSelect2{
+    width: 250px;
+    //padding-top: 25px;
+    margin-top: 15px;
+    margin-left: 0px;
+    // margin-right: 700px;
+}
+
+/*---------------------------------------------*\
+    variables
+\*---------------------------------------------*/
+/*---------------------------------------------*\
+    styles
+\*---------------------------------------------*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 850px;
+  width: 750px;
+}
+
+.wrapper {
+  height: 650px;
+  width: 1250px;
+}
+
+html {
+  font-size: 32px;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 32px;
+  line-height: 1.4;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #002c3c;
+  background-color: #f4fcff;
+}
+
+small {
+  font-size: 0.8rem;
+}
+
+h1 {
+  display: inline-block;
+  font-family: "Francois One", sans-serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 0 0.8rem 0;
+  border-bottom: 4px solid #31d47d;
+}
+
+p {
+  margin: 0 0 2rem 0;
+}
+
+a {
+  color: #31d47d;
+  text-decoration: none;
+}
+a:focus, a:hover {
+  color: #24ae64;
+}
+
+.text-muted, footer {
+  color: #a9bec6;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-form {
+  padding: 0 20px;
+}
+
+.form {
+  display: block;
+  max-width: 400px;
+}
+
+.form-group {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.form-label,
+.form-input {
+  display: block;
+  width: 250px;
+}
+
+.form-label {
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.form-label--required {
+  position: relative;
+}
+.form-label--required:before {
+  content: "*";
+  position: absolute;
+  left: -10px;
+  color: #f42866;
+}
+
+.form-input {
+  padding: 10px;
+  background-color: transparent;
+  border: 0;
+}
+.form-input:focus {
+  outline: none;
+  background-color: #f0f7f9;
+}
+
+.form-footer {
+  text-align: right;
+}
+
+.form-error {
+  color: #f42866;
+  margin-top: 5px;
+}
+
+// .button {
+//   color: white;
+//   white-space: nowrap;
+//   background-color: #31d47d;
+//   padding: 10px 20px;
+//   border: 0;
+//   border-radius: 2px;
+//   transition: all 150ms ease-out;
+// }
+// .button:focus, .button:hover {
+//   background-color: #219d5b;
+// }
+
+.form-addon {
+  position: relative;
+  display: table;
+  width: 250px;
+  border: 1px solid #bcdae5;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.form-addon .form-input,
+.form-addon .form-addon__addon {
+  display: table-cell;
+  vertical-align: middle;
+}
+.form-addon .form-input {
+  width: 100%;
+}
+.form-addon .form-addon__addon {
+  position: relative;
+  width: 40px;
+  text-align: center;
+}
+.form-addon .form-addon__addon:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 0;
+  height: calc(100% - 8px);
+  border-right: 1px solid #bcdae5;
+}
+
+.form-addon__icon {
+  position: absolute;
+  color: #31d47d;
+  font-size: 0.8rem;
+  line-height: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+.toaster {
+  position: fixed;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+}
+
+.toast {
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(-10px) rotateY(40deg);
+  transition: all 300ms ease;
+}
+.toast.toast--show {
+  transform: translateY(0) rotateY(0);
+  opacity: 1;
+}
+
+.toast--success {
+  background-color: #31d47d;
+}
+
+.toast--error {
+  background-color: #f42866;
+}
+
+footer {
+  margin-top: 10px;
+}
+
+/*---------------------------------------------*\
+    GentleForm related styles
+\*---------------------------------------------*/
+.form-addon .form-addon__icon {
+  transform: translateY(0);
+  opacity: 0;
+  transition: transform 150ms ease, opacity 150ms ease;
+}
+.form-addon.is-valid [class*=icon-valid], .form-addon.is-invalid [class*=icon-invalid] {
+  transform: translateY(-50%);
+  opacity: 1;
+}
+.form-addon.is-invalid {
+  background-color: #fef4f7;
+  border-color: #f989ab;
+}
+.form-addon.is-invalid .form-addon__icon {
+  color: #f42866;
+}
+.form-addon.is-invalid .form-addon__addon:before {
+  border-color: #f989ab;
+}
+
+:root {
+  --main-color: #1a535c;
+  --secondary-color: #4ecdc4;
+  --white-color: #f7fff7;
+  --main-accent-color: #ff6b6b;
+  --secondary-accent-color: #ffe66d;
+  --dark-color: #2d232e;
+}
+
+html,
+body {
+  font-family: "Comfortaa", cursive;
+  background: var(--dark-color);
+}
+
+.container-fluid {
+  height: 100vh;
+}
+
+.time {
+  position: relative;
+}
+
+.time .selected {
+  text-align: center;
+  font-size: 5rem;
+  color: var(--secondary-color);
+}
+
+.time .time-btn {
+  transition: all ease-out 0.3s;
+  cursor: pointer;
+}
+
+.time .time-btn:hover {
+  color: var(--secondary-accent-color);
+  text-shadow: 2px 2px 5px #000000;
+}
+
+.time .time-btn.active {
+  color: var(--white-color);
+  text-shadow: 2px 2px 5px #000000;
+}
+
+#time-picker {
+  position: absolute;
+  background: var(--main-color);
+  color: var(--white-color);
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all ease-out 0.3s;
+  top: 75%;
+  pointer-events: none;
+  min-width: 310px;
+}
+
+#time-picker.active {
+  opacity: 1;
+  top: 100%;
+  pointer-events: all;
+}
+
+#time-picker.active .item {
+  cursor: pointer;
+  transition: all ease-out 0.3s;
+  transition-duration: 0.3s;
+  opacity: 0.5;
+  display: block;
+  transform-origin: center;
+}
+
+#time-picker.active .item:hover {
+  text-shadow: 2px 2px 5px black;
+  opacity: 1;
+  transform: scale(1.2, 1.2);
+}
+
+#time-picker.active .item.active {
+  opacity: 1;
+  color: var(--secondary-accent-color);
+}
+
+body,
+md-content {
+  background-color: #f5f5f5 !important;
+}
+
+body > md-toolbar {
+  z-index: 3;
+}
+
+md-toolbar.md-table-toolbar.alternate {
+  color: #1e88e5;
+  background-color: #e3f2fd;
+}
+
+md-toolbar.md-table-toolbar.alternate .md-toolbar-tools {
+  font-size: 16px;
+}
+
+md-card {
+  padding: 8px 8px 8px 24px;
+}

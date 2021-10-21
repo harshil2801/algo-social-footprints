@@ -148,6 +148,7 @@
 
 
  -->
+ 
  <div class="customDates">
  <mat-form-field id="abc" appearance="fill">
   <mat-label>Enter a date range</mat-label>
@@ -164,13 +165,19 @@
 </mat-form-field>
 </div>
 
+<button id="btn1" (click)="onSubmit()">Submit</button>
+
 <!-- {{date  | myDate:'yyyy-MM-dd'}} -->
 
 <!-- <input type="date"> -->
 
  <div class="row">
+   <!-- <div class="card" id="card11"> -->
   <div id="container"></div>
+<!-- </div> -->
+<!-- <div class="card" id="card11"> -->
   <div id="chartdiv1"></div>
+<!-- </div> -->
  </div>
 
  <hr class="solid">
@@ -189,3 +196,4 @@
     {{ item.complete_text}}
   </p>
 </div> -->
+

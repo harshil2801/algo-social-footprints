@@ -1,13 +1,10 @@
 
-<h4 id="inputbox">Stream Name    : </h4>
+<!-- <h4 id="inputbox">Stream Name    : </h4>
 <input [(ngModel)] = "streamname" id="input1">
-
-
-
 
 <h4 id="inputbox">Twitter Handle : </h4>
 <label id="label" for="input1">Twitter username with the leading @ symbol:</label><br/>
-<!-- <div class="is-helpful" data-helper="Validates if not empty." data-error="Please enter your first name."></div> -->
+<div class="is-helpful" data-helper="Validates if not empty." data-error="Please enter your first name."></div>
 <span class="icon validation small success hide">
   <span class="fa fa-check"></span>
 </span>
@@ -34,7 +31,7 @@
         <option>Minute</option>
         <option>Second</option>
       </select>
-</div>
+</div> -->
 
 
 <!-- <p>{{ streamname }}</p>
@@ -42,8 +39,8 @@
 <p>{{ hashtags }}</p>
 <p>{{ keywords }}</p> -->
 
-<button id="button" (click)="submit()">Submit</button>
-<button id="button1" routerLink="/dashboard" routerLinkActive="active" #dashboard="routerLinkActive" >Back</button>
+<!-- <button id="button" (click)="submit()">Submit</button>
+<button id="button1" routerLink="/dashboard" routerLinkActive="active" #dashboard="routerLinkActive" >Back</button> -->
 
 <!-- <a class="nav-link" routerLink="/dashboard" routerLinkActive="active" #dashboard="routerLinkActive"></a> -->
 
@@ -95,3 +92,355 @@
   </button>
 </div>
 </form> -->
+
+
+<div class="toaster"></div>
+
+<main class="wrapper">
+  <section class="section-form">
+    <!-- <h1>GentleForm</h1>
+    <p>
+      Accessible and user-friendly HTML5 form validation library.<br>
+      <a href="https://github.com/Zhouzi/GentleForm" target="_blank">GitHub Repo</a> - <a href="https://twitter.com/home?status=GentleForm%20-%20Accessible%20and%20user-friendly%20HTML5%20form%20validation%20library.%20http%3A%2F%2Fcodepen.io%2FZhouzi%2Ffull%2FQbBzZp%2F%20via%20%40zh0uzi" target="_blank">Tweet!</a>
+    </p> -->
+
+    <form name="signup" class="form" novalidate>
+      <div class="form-group">
+        <label for="name" class="form-label form-label--required">
+          Stream Name:
+        </label>
+
+        <div class="form-addon" data-states-for="name">
+          <div class="form-addon__addon">
+            <span class="icon-name"></span>
+          </div>
+
+          <input type="text"
+                 id="name"
+                 name="name"
+                 class="form-input"
+                 placeholder="stream name"
+                 required>
+          
+          <span class="form-addon__icon icon-valid"></span>
+          <span class="form-addon__icon icon-invalid"></span>
+        </div>
+
+        <div data-errors-for="name">
+          <!-- <small class="form-error"
+                 data-errors-when="valueMissing">
+            This field is required.
+          </small> -->
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="form-label form-label--required">
+          Twitter Handle <span class="text-muted">( include @ )</span>:
+        </label>
+
+        <div class="form-addon" data-states-for="email">
+          <div class="form-addon__addon">
+            <span class="icon-email"></span>
+          </div>
+
+          <input type="email"
+                 id="email"
+                 name="email"
+                 class="form-input"
+                 placeholder="@twitter_handle"
+                 required>
+
+          <span class="form-addon__icon icon-valid"></span>
+          <span class="form-addon__icon icon-invalid"></span>
+        </div>
+
+        <div data-errors-for="email">
+          <!-- <small class="form-error"
+                 data-errors-when="valueMissing">
+            This field is required.
+          </small> -->
+          
+          <!-- <small class="form-error"
+                 data-errors-when="typeMismatch">
+            Please enter a valid email address.
+          </small> -->
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone" class="form-label form-label--required">
+          Hashtags <span class="text-muted">( include # )</span>:
+        </label>
+
+        <div class="form-addon" data-states-for="phone">
+          <div class="form-addon__addon">
+            <span class="icon-phone"></span>
+          </div>
+
+          <input type="text"
+                 id="phone"
+                 name="phone"
+                 class="form-input"
+                 placeholder="#hashtag"
+                 pattern="[0-9]{3} [0-9]{3} [0-9]{3}">
+
+          <span class="form-addon__icon icon-valid"></span>
+          <span class="form-addon__icon icon-invalid"></span>
+        </div>
+
+        <div data-errors-for="phone">
+          <!-- <small class="form-error"
+                 data-errors-when="patternMismatch">
+            Please enter a valid phone number.
+          </small> -->
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone" class="form-label form-label--required">
+          Keywords :
+        </label>
+
+        <div class="form-addon" data-states-for="phone">
+          <div class="form-addon__addon">
+            <span class="icon-phone"></span>
+          </div>
+
+          <input type="text"
+                
+                 id="phone"
+                 name="phone"
+                 class="form-input"
+                 placeholder="keywords"
+                 pattern="[0-9]{3} [0-9]{3} [0-9]{3}">
+
+          <span class="form-addon__icon icon-valid"></span>
+          <span class="form-addon__icon icon-invalid"></span>
+        </div>
+
+        <div data-errors-for="phone">
+          <!-- <small class="form-error"
+                 data-errors-when="patternMismatch">
+            Please enter a valid phone number.
+          </small> -->
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone" class="form-label form-label--required">
+          Time Range :
+        </label>
+        <div class="row">
+        <input value=TO (click)="open($event)"/>
+        <p>{{ open.time }}</p>
+        <input value=FROM (click)="open($event)"/>
+        {{ time }}
+      </div>
+      </div>
+
+      
+      <div class="form-group">
+        <label for="phone" class="form-label form-label--required">
+          Frequency :
+        </label>
+        <select
+        class="form-control form-control-lg"
+        id="exampleFormControlSelect2">
+        <option>Hourly</option>
+        <option>Minute</option>
+        <option>Second</option>
+      </select>
+      </div>
+
+      <script>
+        $(document).ready(function () {
+  var hoursColumnNumber = 6;
+  var minutesColumnNumber = 4;
+  var minutesStep = 5;
+
+  $(document).on("click", ".time .time-btn", function () {
+    let $btn = $(this);
+    if ($btn.hasClass("active")) {
+      console.log("chiusura");
+      timePickerClose();
+    } else {
+      console.log("apertura");
+      if ($("#time-picker").hasClass("active")) {
+        timePickerClose(function () {
+          $btn.addClass("active");
+          timePickerOpen();
+        });
+      } else {
+        $btn.addClass("active");
+        timePickerOpen();
+      }
+    }
+  });
+
+  $(document).on("click", "#time-picker .item", function () {
+    if (!$(this).hasClass("active")) {
+      $(".item.active").removeClass("active");
+      $(this).addClass("active");
+      let value = $(this).text();
+      $(".time-btn.active").text(value);
+      timePickerClose();
+    }
+  });
+
+  function timePickerOpen() {
+    let html = "";
+    switch ($(".time-btn.active").attr("id")) {
+      case "hours":
+        for (let i = 0; i < 24; i++) {
+          if (i % 6 == 0) {
+            if (i != 0) {
+              html += "</div>";
+            }
+            html += '<div class="row pb-2">';
+          }
+          let value = "0" + i;
+          html +=
+            '<div class="col"><span class="item">' +
+            value.substr(-2) +
+            "</span></div>";
+        }
+        break;
+      case "minutes":
+        for (let i = 0; i < 60; i += minutesStep) {
+          if (i % minutesColumnNumber == 0) {
+            if (i != 0) {
+              html += "</div>";
+            }
+            html += '<div class="row pb-2">';
+          }
+          let value = "0" + i;
+          html +=
+            '<div class="col"><span class="item">' +
+            value.substr(-2) +
+            "</span></div>";
+        }
+        break;
+    }
+    html += "</div>";
+    $("#time-picker").html(html);
+    $("#time-picker .row:last-child").removeClass("pb-2");
+    $("#time-picker").addClass("active");
+  }
+
+  function timePickerClose(callback = false) {
+    $(".time-btn.active").removeClass("active");
+    $("#time-picker").removeClass("active");
+    if (callback) {
+      setTimeout(function () {
+        callback();
+      }, getDurationInMs($("#time-picker").css("transition-duration")));
+    }
+  }
+
+  function getDurationInMs(transitionDuration) {
+    return (
+      parseFloat(
+        transitionDuration.substr(0, transitionDuration.indexOf("s"))
+      ) * 1000
+    );
+  }
+});
+
+      </script>
+
+      <!-- <h4 id="inputbox">Frequency :</h4>
+<div class="form-group">
+    <select
+        class="form-control form-control-lg"
+        id="exampleFormControlSelect2"
+      >
+        <option>Hourly</option>
+        <option>Minute</option>
+        <option>Second</option>
+      </select>
+</div>  -->
+
+      <!-- <div class="form-group">
+        <label for="password" class="form-label form-label--required">
+          Keywords: 
+        </label>
+
+        <div class="form-addon" data-states-for="password">
+          <div class="form-addon__addon">
+            <span class="icon-password"></span>
+          </div>
+
+          <input type="password"
+                 id="password"
+                 name="password"
+                 class="form-input"
+                 placeholder="keywords"
+                 required>
+
+          <span class="form-addon__icon icon-valid"></span>
+          <span class="form-addon__icon icon-invalid"></span>
+        </div>
+
+        <div data-errors-for="password"> -->
+          <!-- <small class="form-error"
+                 data-errors-when="valueMissing">
+            This field is required.
+          </small> -->
+          
+          <!-- <small class="form-error"
+                 data-errors-when="tooShort">
+            Your password should be at least 6 characters long.
+          </small> -->
+        <!-- </div>
+      </div> -->
+
+      <div class="form-footer">
+        <button id="button" (click)="submit()">Submit</button>
+        <button id="button1" routerLink="/dashboard" routerLinkActive="active" #dashboard="routerLinkActive" >Back</button>
+        <!-- <button type="back" class="button" >Back</button>
+        <button type="submit" class="button">Submit</button> -->
+      </div>
+    </form>
+  </section>
+</main>
+
+
+<script>
+  const toaster = document.getElementsByClassName('toaster')[0]
+const form = document.querySelector('form')
+
+GentleForm(form, function (event) {
+  event.preventDefault()
+  
+  if (this.isValid()) addToast('success', 'Yay, the form is valid!')
+  else addToast('error', 'Oops, the form is invalid.')
+})
+
+function addToast (type, message) {
+  const toast = document.createElement('div')
+
+  toast.classList.add('toast')
+  toast.classList.add('toast--' + type)
+  toast.innerHTML = message
+
+  toaster.appendChild(toast)
+
+  toast.addEventListener('transitionend', function (event) {
+    if (event.propertyName !== 'transform') return
+
+    if (toast.classList.contains('toast--show')) {
+      setTimeout(function () {
+        toast.classList.remove('toast--show')
+      }, 3000)
+    } else {
+      toaster.removeChild(toast)
+    }
+  }, false)
+
+  setTimeout(() => toast.classList.add('toast--show'), 100)
+}
+</script>
+
+
+

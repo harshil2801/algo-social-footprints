@@ -50,19 +50,28 @@ Wordcloud(Highcharts);
 // import { DatePipe } from '@angular/common'
 
 import { ExampleHeaderComponent } from "src/app/dashboard/example-header/example-header.component";
+import { DatePipe } from '@angular/common';
+// import { start } from "repl";
 // C:\Users\Harshil\SocialFootprintTempalte\src\app\dashboard\example-header\example-header.component.ts
 @Component({
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
   styleUrls: ["./dashboard.component.scss"],
+  providers: [
+    DatePipe
+  ]
 })
 
 export class DashboardComponent implements OnInit {
   readonly ExampleHeaderComponent = ExampleHeaderComponent;
+  
   range = new FormGroup({
     start: new FormControl(),
     end: new FormControl(),
   });
+
+  formattedStart : any;
+  formattedEnd : any;
 
   public chart1: am4charts.XYChart;
   mapChart: any;
@@ -265,7 +274,7 @@ function createMarkers(chart) {
     public formatter: NgbDateParserFormatter,
     public rest: ApiService,
     private zone: NgZone,
-    // private datePipe: DatePipe
+    private datePipe: DatePipe
   ) {
     this.fromDate = calendar.getToday();
     this.toDate = calendar.getNext(calendar.getToday(), "d", 10);
@@ -347,7 +356,12 @@ function createMarkers(chart) {
 
   }
 
-  
+  onSubmit(){
+    this.formattedStart =  this.datePipe.transform(this.range.value.start, "yyyy-MM-dd");
+    this.formattedEnd = this.datePipe.transform(this.range.value.end,"yyyy-MM-dd");
+    console.log(this.formattedStart);
+    console.log(this.formattedEnd);
+   }
 
   // myFunction(){
   //   this.myDate=new Date();

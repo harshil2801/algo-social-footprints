@@ -6,7 +6,7 @@ import {
   FormGroup,
   Validators
 } from '@angular/forms';
-
+import { AmazingTimePickerService } from 'amazing-time-picker';
 @Component({
   selector: 'app-new-streams',
   templateUrl: './new-streams.component.html',
@@ -17,7 +17,16 @@ export class NewStreamsComponent implements OnInit {
   form: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+    private atp: AmazingTimePickerService
+    ) { }
+
+    open(ev: any) {
+      const amazingTimePicker = this.atp.open();
+      amazingTimePicker.afterClose().subscribe(time => {
+        console.log(time);
+      });
+    }
 
   ngOnInit(): void {
 

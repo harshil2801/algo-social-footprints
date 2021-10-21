@@ -38,6 +38,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { CustomRangePanelComponent } from 'src/app/dashboard/example-header/custom-range-panel.component';
 import { ExampleHeaderComponent } from 'src/app/dashboard/example-header/example-header.component';
 import { MarketResearchComponent } from './market-research/market-research.component';
+import { AmazingTimePickerModule } from 'amazing-time-picker';
+const lang = "en-US";
 // src/app/dashboard/example-header/example-header.component
 // import { DatePipe } from '@angular/common';
 // import { FormsModule } from "@angular/forms";
@@ -87,7 +89,9 @@ import {
     // TagCloudModule
     MatDatepickerModule,
     IgxCategoryChartModule,
-	  IgxLegendModule
+	  IgxLegendModule,
+    AmazingTimePickerModule
+    // NgxMatTimepickerModule.setLocale(lang)
   ],
   providers: [ThemeService,HttpClientModule],
   bootstrap: [AppComponent]

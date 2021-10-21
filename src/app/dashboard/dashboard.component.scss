@@ -360,5 +360,43 @@
 
 #abc{
   margin-top: 15px;
-  margin-left: 900px;
+  margin-left: 950px;
+}
+
+#btn1{
+  margin-left: 1100px;
+  margin-top: 0px;
+}
+
+.storage {
+  @include flex(row);
+  margin-top: 20px;
+  section {
+    border-radius: 20px;
+    background: white;
+    width: 370px;
+    &:first-child {
+      margin-right: 20px;
+    }
+    // header {
+    //   @include flex(row, space-between);
+    //   padding: 25px;
+    //   h4 {
+    //     @include font(16px, 400);
+    //     margin: 0;
+    //   }
+    //   button {
+    //     @include font(14px, 400, #e2daed);
+    //     padding: 5px 10px;
+    //     background: transparent;
+    //     border: 1px solid #e2daed;
+    //     border-radius: 20px;
+    //   }
+    // }
+  }
+}
+
+#card11{
+  border: black;
+  width: 550px;
 }
