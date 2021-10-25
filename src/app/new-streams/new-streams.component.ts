@@ -7,6 +7,9 @@ import {
   Validators
 } from '@angular/forms';
 import { AmazingTimePickerService } from 'amazing-time-picker';
+import { TimePicker } from '@syncfusion/ej2-calendars';
+import { enableRipple } from '@syncfusion/ej2-base';
+import { height } from '@amcharts/amcharts4/.internal/core/utils/Utils';
 @Component({
   selector: 'app-new-streams',
   templateUrl: './new-streams.component.html',
@@ -28,8 +31,30 @@ export class NewStreamsComponent implements OnInit {
       });
     }
 
-  ngOnInit(): void {
+    
 
+  ngOnInit(): void {
+    enableRipple(false);
+        // creates timepicker
+let timeObject: TimePicker = new TimePicker({
+  placeholder:'From',
+  // define the custom class
+  cssClass: 'e-custom-style',
+  width:"247px",value: new Date("1/1/2018 2:00 AM")
+});
+timeObject.appendTo('#element');
+
+timeObject.show();
+
+// timeObject.appendTo('#element1');
+
+let timeObject1: TimePicker = new TimePicker({
+  placeholder:"To",
+  cssClass:'e-custome-style',
+  width:"247px", value: new Date("1/1/2018 2:00 AM")
+});
+timeObject1.appendTo("#element1");
+timeObject1.show();
     this.form = this.formBuilder.group(
       {
         email: ['', [Validators.required, Validators.email]],

@@ -373,6 +373,7 @@ function createMarkers(chart) {
 
   ngOnInit() {
     this.showResponse();
+    this.onSubmit();
     console.log(typeof(this.stringResult));
     console.log(this.stringResult);
     var text = this.stringResult['complete_text'];
